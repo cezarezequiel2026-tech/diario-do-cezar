@@ -1,0 +1,9 @@
+DIÁRIO DO CÉZAR — pacote inicial
+
+Este pacote ainda NÃO está publicado nem conectado ao seu Firebase. Antes de usar, substitua os valores COLE_AQUI no index.html pela configuração Web do seu projeto.
+
+Obter configuração: Firebase Console > engrenagem Configurações do projeto > Geral > Seus apps > adicionar app Web (ícone </>) se necessário. Copie o objeto firebaseConfig.
+
+O app usa a coleção sharedRecords e o documento appSettings/shared. As regras do Firestore devem proteger ambos e permitir somente os dois UID autorizados. Não use regras públicas.
+
+Para instalar nos Androids, o site precisa ser publicado em HTTPS (por exemplo Firebase Hosting). Se estiver usando só o celular, podemos seguir por uma alternativa de publicação. Não compartilhe senhas ou códigos de verificação.

@@ -11,7 +11,14 @@ import{initializeApp}from"https://www.gstatic.com/firebasejs/10.12.2/firebase-ap
 import{getAuth,onAuthStateChanged,signInWithEmailAndPassword,createUserWithEmailAndPassword,signOut}from"https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import{getFirestore,collection,addDoc,deleteDoc,doc,query,orderBy,onSnapshot,serverTimestamp,setDoc,getDoc}from"https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 // Firebase Console > Configurações do projeto > Geral > Seus apps > Web app
-const firebaseConfig={apiKey:AIzaSyBLE9MmzoDNvFihelnJ4NhAhgnMuWGXNX0,authDomain: diario-do-cezar.firebaseapp.com,projectId:diario-do-cezar,storageBucket: diario-do-cezar.firebasestorage.app,messagingSenderId:401582006460,appId: 1:401582006460:web:87b0d5db63eb1e9fae70b9};
+const firebaseConfig = {
+  apiKey: "AIzaSyBLE9MmzoDNvFihelnJ4NhAhgnMuWGXNX0",
+  authDomain: "diario-do-cezar.firebaseapp.com",
+  projectId: "diario-do-cezar",
+  storageBucket: "diario-do-cezar.firebasestorage.app",
+  messagingSenderId: "401582006460",
+  appId: "1:401582006460:web:87b0d5db63eb1e9fae70b9",
+  measurementId: "G-2TRZP89XKG"};
 const configured=!Object.values(firebaseConfig).some(v=>String(v).startsWith("COLE_AQUI"));
 const $=s=>document.querySelector(s);let auth,db,user=null,unsub=null,records=[];
 function err(e){return({"auth/invalid-credential":"E-mail ou senha incorretos.","auth/email-already-in-use":"Este e-mail já está cadastrado.","auth/weak-password":"Use uma senha com pelo menos 6 caracteres.","permission-denied":"Acesso negado pelas regras do Firestore."})[e.code]||e.message}
